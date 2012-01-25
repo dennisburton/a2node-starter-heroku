@@ -10,9 +10,9 @@
 
 
 NVM - Node version manager
-  nvm will allow for switching versions of node and the packages
+    nvm will allow for switching versions of node and the packages
 installed with that version.
-  Heroku pins the version of node at 0.4.7.
-  Current version is 0.6.8
+    Heroku pins the version of node at 0.4.7.
+    Current version is 0.6.8
 
 
