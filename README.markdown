@@ -1,6 +1,8 @@
 
 # Getting set up with node.js and Heroku
 
+[Source Tim Taylor](https://github.com/toolbear/easy-breezy-node-heroku)
+
 ## Resources
 * [GitHub](https://github.com/)
 * [NVM (Node Version Manager)](https://github.com/creationix/nvm#readme)
