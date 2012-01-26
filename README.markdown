@@ -64,5 +64,83 @@ Download Heroku CLI
 Login to Heroku. You only have to do this once.
 
     heroku login
+    
+Clone Meetup project
 
+    git clone git://github.com/dennisburton/a2node-starter-heroku.git
+    cd a2node-starter-heroku
+
+Install Node modules required for project
+
+    npm install
+
+NPM installs dependencies for our project that are declared in
+`package.json`. Each time we add a dependency
+to `package.json` we will re-run `npm install`.
+
+Run locally
+
+    foreman start
+    # 16:29:15 web.1     | started with pid 35445
+    # 16:29:15 web.1     | Listening on 5000
+
+Visit [http://localhost:5000/](http://localhost:5000/)
+
+## 4. Review Node.js Project Structure
+
+    a2node-starter-heroku
+    ├── .git
+    │   ├── ...
+    ├── .gitignore
+    ├── Procfile
+    ├── README.markdown
+    ├── package.json
+    └── web.js
+
+### Excercise
+
+* Change "Hello World" to "Hello, {You}", e.g. "Hello, node monkey"
+* Restart `foreman`, see your change locally
+* Commit your changes
+        git add web.js
+        git ci -m 'personalized greeting'
+
+## 5. Deploy!
+
+Create new Heroku app in your account. You do this once per app.
+**Important**: specifying Cedar is important. The original Heroku stack
+was Ruby only.
+
+    heroku create --stack cedar
+    # optionaly: heroku create --stack cedar friendly_app_name
+    # Creating sharp-rain-871... done, stack is cedar
+    # http://sharp-rain-871.herokuapp.com/ |
+git@heroku.com:sharp-rain-871.git
+    # Git remote heroku added
+
+
+Check out the placeholder app:
+
+    heroku open
+
+Deploy your code:
+
+    git push heroku master
+    # ...
+
+Your app!
+
+    heroku open
+    
+## 6. A little front-end
+
+Add in `express.static(...)` for static file serving.
+
+Exercise
+
+* Change `Procfile` to point to `web.static.js`
+* restart Foreman and test out locally
+* Change the message displayed and test locally
+* Deploy to heroku
+* test remotely
 
