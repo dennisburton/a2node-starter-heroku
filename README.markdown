@@ -42,6 +42,10 @@ Add this line to `~/.bashrc` or `~/.profile` or `~/.bash_profile`
     node --version
     # v0.4.7
 
+## NOTE: If using Ubuntu and you get an error that OpenSSL is not installed or available, one solution that has worked is to install/reinstall OpenSSL prior to installing Node v0.4.7 using nvm.  
+
+    sudo apt-get install libssl-dev
+
 Install NPM
 
     curl http://npmjs.org/install.sh | sh
